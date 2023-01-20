@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="html-help.css">
+    </head>
+    <body>
+        <div id="sidenavigation">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <h1 id="nav-header">HTML Hilfen</h1>
+
+            <input type="text" id="search" onkeyup="search()" placeholder="Suchen.." title="HTML Hilfen">
+
+            <ul id="help-menu">
+                <li><a href="#">Test</a></li>
+            </ul>
+
+        </div>
+
+        <div id="openNav" onclick="openNav()">
+            <div class="nav-line"></div>
+            <div class="nav-line"></div>
+            <div class="nav-line"></div>
+        </div>
+
+        <script>
+
+            function openNav() {
+                document.getElementById("sidenavigation").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("sidenavigation").style.width = "0";
+            }
+
+            function search() {
+                var input, filter, ul, li, a, i;
+                input = document.getElementById("search");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("help-menu");
+                li = ul.getElementsByTagName("li");
+
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+
+        </script>
+
+    </body>
+</html>

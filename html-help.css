@@ -1,0 +1,76 @@
+#sidenavigation {
+    height: 86%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    bottom: -1; 
+    left: 0;
+    background-color: #2f3136; 
+    overflow-x: hidden; 
+    padding-top: 60px;
+    border: 2px solid black; 
+    transition: 0.5s; 
+}
+  
+a.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+a.closebtn:hover {
+    color: #f1f1f1;
+}
+
+#search {
+    width: 215px;
+    font-size: 18px;
+    padding: 11px;
+    border: 5px solid #2f3136;
+    margin-top: -5%;
+}
+
+#help-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#help-menu li a {
+    padding: 12px;
+    text-decoration: none;
+    color: #dcddde;
+    display: block;
+}
+
+#help-menu li a:hover {
+    background-color: #3c3f45;
+}
+
+div.nav-line {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+#openNav {
+    background-color: #2f3136;
+    padding: 1rem;
+    width: fit-content;
+    margin-left: -5px;
+    float: left;
+}
+
+#nav-header {
+    font-family: Arial;
+    color: #dcddde;
+    margin-left: 2.5%;
+    margin-top: -20%;
+    position: absolute;
+}
