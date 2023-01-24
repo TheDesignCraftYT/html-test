@@ -22,9 +22,9 @@
             <input type="text" id="search" onkeyup="search()" placeholder="Suchen.." title="HTML Hilfen">
 
             <ul id="help-menu">
-                <li><a href="#menu-help" onclick="closeNav()">Menü-Leiste</a></li>
-				<li><a href="#info-box-help" onclick="closeNav()">Info-Boxen</a></li>
-				<li><a href="#background-image-help" onclick="closeNav()">Hintergrund-Bild</a></li>
+                <li><a href="#menu-help" onclick="infoBoxInitialize('menu-help')">Menü-Leiste</a></li>
+				<li><a href="#info-box-help" onclick="infoBoxInitialize('info-box-help')">Info-Boxen</a></li>
+				<li><a href="#background-image-help" onclick="infoBoxInitialize('background-image-help')">Hintergrund-Bild</a></li>
             </ul>
 
         </div>
@@ -138,6 +138,14 @@
         <a id="jump-to-top" href="#menu">/\</a>
 
         <script>
+
+          function infoBoxInitialize(myBoxId) {
+            closeNav();
+
+            document.getElementById(myBoxId).style.backgroundColor = '#929292';
+            setTimeout(() => {  document.getElementById(myBoxId).style.backgroundColor = '#36393f'; }, 300);
+          }
+
             var list = document.getElementsByClassName("code-block");
             for (var i = 0; i < list.length; i++) {
                 w3CodeColor(list[i]);
