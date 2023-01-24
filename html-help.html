@@ -22,7 +22,9 @@
             <input type="text" id="search" onkeyup="search()" placeholder="Suchen.." title="HTML Hilfen">
 
             <ul id="help-menu">
-                <li><a href="#">Test</a></li>
+                <li><a href="#menu-help" onclick="closeNav()">Menü-Leiste</a></li>
+				<li><a href="#info-box-help" onclick="closeNav()">Info-Boxen</a></li>
+				<li><a href="#background-image-help" onclick="closeNav()">Hintergrund-Bild</a></li>
             </ul>
 
         </div>
@@ -38,10 +40,12 @@
             <h2 class="sub-headline">Hilfe zu HTML</h2>
         </div>
 
-        <div class="info-box">
+        <div class="info-box" id="menu-help">
+		<h2 class="code-block-headline">Die obere Menü-Leiste</h2>
             <p class="color-light-gray">Hier einfach mal der Code für die Menü-Hilfe:</p>
+			<h2 class="code-block-headline">HTML</h2>
             <div class="code-block">
-                <p class="color-light-gray">
+                <p>
                     &lt;div id="menu"&gt;<br/>
                         &lt;h2&gt;<br/>
                             &lt;a class="menu-item" href="main.html"&gt;Startseite&lt;/a&gt;<br/>
@@ -51,143 +55,83 @@
                     &lt;/div&gt;<br/>
                 </p>
             </div>
+			<h2 class="code-block-headline">CSS</h2>
+			<div class="code-block">
+				<p>
+					#menu {<br/>
+						background-color: #2f3136;<br/>
+						text-align: center;<br/>
+						font-family: Arial;<br/>
+						margin-top: -21px;<br/>
+						margin-left: -8px;<br/>
+						width: 101.5%;<br/>
+					}<br/>
+					<br/>
+					a.menu-item {<br/>
+						color: white;<br/>
+						text-align: center;<br/>
+						text-decoration: none;<br/>
+						display: inline-block;<br/>
+						padding-left: 1rem;<br/>
+						padding-right: 1rem;<br/>
+						padding-top: 1rem;<br/>
+						padding-bottom: 1rem;<br/>
+						margin-top: 1rem;<br/>
+						margin-bottom: 1rem;<br/>
+						margin-left: 0.5rem;<br/>
+						margin-right: 0.5rem;<br/>
+						border-radius: 0.5rem;<br/>
+					}<br/>
+					<br/>
+					a.menu-item:link, a.menu-item:visited {<br/>
+						background-color: #2f3136;<br/>
+					}<br/>
+					<br/>
+					a.menu-item:hover, a.menu-item:active {<br/>
+						background-color: #3c3f45;<br/>
+					}<br/>
+				</p>
+			</div>
         </div>
-
-        <br/>
-
-        <div class="info-box">
-            <p class="color-light-gray">Hier einfach mal der Code für die Menü-Hilfe:</p>
-            <div class="code-block">
-                <p class="color-light-gray">
-                    &lt;div id="menu"&gt;<br/>
-                        &lt;h2&gt;<br/>
-                            &lt;a class="menu-item" href="main.html"&gt;Startseite&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="test.html"&gt;Test&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="html-help.html"&gt;HTML Hilfe&lt;/a&gt;<br/>
-                        &lt;/h2&gt;<br/>
-                    &lt;/div&gt;<br/>
-                </p>
-            </div>
-        </div>
-
-        <br/>
-
-        <div class="info-box">
-            <p class="color-light-gray">Hier einfach mal der Code für die Menü-Hilfe:</p>
-            <div class="code-block">
-                <p class="color-light-gray">
-                    &lt;div id="menu"&gt;<br/>
-                        &lt;h2&gt;<br/>
-                            &lt;a class="menu-item" href="main.html"&gt;Startseite&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="test.html"&gt;Test&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="html-help.html"&gt;HTML Hilfe&lt;/a&gt;<br/>
-                        &lt;/h2&gt;<br/>
-                    &lt;/div&gt;<br/>
-                </p>
-            </div>
-        </div>
-
-        <br/>
-
-        <div class="info-box">
-            <p class="color-light-gray">Hier einfach mal der Code für die Menü-Hilfe:</p>
-            <div class="code-block">
-                <p class="color-light-gray">
-                    &lt;div id="menu"&gt;<br/>
-                        &lt;h2&gt;<br/>
-                            &lt;a class="menu-item" href="main.html"&gt;Startseite&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="test.html"&gt;Test&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="html-help.html"&gt;HTML Hilfe&lt;/a&gt;<br/>
-                        &lt;/h2&gt;<br/>
-                    &lt;/div&gt;<br/>
-                </p>
-            </div>
-        </div>
-
-        <br/>
-
-        <div class="info-box">
-            <p class="color-light-gray">Hier einfach mal der Code für die Menü-Hilfe:</p>
-            <div class="code-block">
-                <p class="color-light-gray">
-                    &lt;div id="menu"&gt;<br/>
-                        &lt;h2&gt;<br/>
-                            &lt;a class="menu-item" href="main.html"&gt;Startseite&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="test.html"&gt;Test&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="html-help.html"&gt;HTML Hilfe&lt;/a&gt;<br/>
-                        &lt;/h2&gt;<br/>
-                    &lt;/div&gt;<br/>
-                </p>
-            </div>
-        </div>
-
-        <br/>
-
-        <div class="info-box">
-            <p class="color-light-gray">Hier einfach mal der Code für die Menü-Hilfe:</p>
-            <div class="code-block">
-                <p class="color-light-gray">
-                    &lt;div id="menu"&gt;<br/>
-                        &lt;h2&gt;<br/>
-                            &lt;a class="menu-item" href="main.html"&gt;Startseite&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="test.html"&gt;Test&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="html-help.html"&gt;HTML Hilfe&lt;/a&gt;<br/>
-                        &lt;/h2&gt;<br/>
-                    &lt;/div&gt;<br/>
-                </p>
-            </div>
-        </div>
-
-        <br/>
-
-        <div class="info-box">
-            <p class="color-light-gray">Hier einfach mal der Code für die Menü-Hilfe:</p>
-            <div class="code-block">
-                <p class="color-light-gray">
-                    &lt;div id="menu"&gt;<br/>
-                        &lt;h2&gt;<br/>
-                            &lt;a class="menu-item" href="main.html"&gt;Startseite&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="test.html"&gt;Test&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="html-help.html"&gt;HTML Hilfe&lt;/a&gt;<br/>
-                        &lt;/h2&gt;<br/>
-                    &lt;/div&gt;<br/>
-                </p>
-            </div>
-        </div>
-
-        <br/>
-
-        <div class="info-box">
-            <p class="color-light-gray">Hier einfach mal der Code für die Menü-Hilfe:</p>
-            <div class="code-block">
-                <p class="color-light-gray">
-                    &lt;div id="menu"&gt;<br/>
-                        &lt;h2&gt;<br/>
-                            &lt;a class="menu-item" href="main.html"&gt;Startseite&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="test.html"&gt;Test&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="html-help.html"&gt;HTML Hilfe&lt;/a&gt;<br/>
-                        &lt;/h2&gt;<br/>
-                    &lt;/div&gt;<br/>
-                </p>
-            </div>
-        </div>
-
-        <br/>
-
-        <div class="info-box">
-            <p class="color-light-gray">Hier einfach mal der Code für die Menü-Hilfe:</p>
-            <div class="code-block">
-                <p class="color-light-gray">
-                    &lt;div id="menu"&gt;<br/>
-                        &lt;h2&gt;<br/>
-                            &lt;a class="menu-item" href="main.html"&gt;Startseite&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="test.html"&gt;Test&lt;/a&gt;<br/>
-                            &lt;a class="menu-item" href="html-help.html"&gt;HTML Hilfe&lt;/a&gt;<br/>
-                        &lt;/h2&gt;<br/>
-                    &lt;/div&gt;<br/>
-                </p>
-            </div>
-        </div>
+		
+		<div class="info-box" id="info-box-help">
+			<h2 class="code-block-headline">Info-Boxen</h2>
+			<p class="color-light-gray">Das ist der Code von diesen Info-Boxen.</p>
+			<h2 class="code-block-headline">HTML</h2>
+			<div class="code-block">
+				&lt;div class="info-box"&gt;<br/>
+					*Inhalt*<br/>
+				&lt;/div&gt;<br/>
+			</div>
+			
+			<h2 class="code-block-headline">CSS</h2>
+			<div class="code-block">
+				div.info-box {<br/>
+					background-color: #36393f;<br/>
+					border-radius: 0.5rem;<br/>
+					padding: 0.5rem;<br/>
+					font-family: Segoe UI;<br/>
+					width: 50rem;<br/>
+					margin: 0 auto;<br/>
+					margin-top: 0.5rem;<br/>
+				}<br/>
+			</div>
+		</div>
+		
+		<div class="info-box" id="background-image-help">
+			<h2 class="code-block-headline">Bild als Hintergrund</h2>
+			<p class="color-light-gray">Hintergrundbilder werden in der CSS Datei definiert.</p>
+			<h2 class="code-block-headline">CSS</h2>
+			<div class="code-block">
+				body{<br/>
+					background-image: url('background.jpg');<br/>
+					background-position: center;<br/>
+					background-repeat: no-repeat;<br/>
+					background-size: cover;<br/>
+					background-attachment: fixed;<br/>
+				}<br/>
+			</div>
+		</div>
 
         <br/>
 
