@@ -1,7 +1,7 @@
 #sidenavigation {
     height: 86%; 
     width: 0; 
-    position: fixed; 
+    position: absolute; 
     z-index: 1; 
     bottom: -1; 
     left: 0;
