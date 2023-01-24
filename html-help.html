@@ -29,16 +29,18 @@
 
         </div>
 
-        <div id="openNav" onclick="openNav()">
+        <a id="openNav" href="javascript:void(0)" onclick="openNav()">
             <div class="nav-line"></div>
             <div class="nav-line"></div>
             <div class="nav-line"></div>
-        </div>
+        </a>
 
         <div id="header">
             <h1 class="headline">HTML Test</h1>
             <h2 class="sub-headline">Hilfe zu HTML</h2>
         </div>
+
+        <a id="jump-to-top" href="javascript:void(0)" onclick="scrollToTop()">/\</a>
 
         <div class="info-box" id="menu-help">
 		<h2 class="code-block-headline">Die obere Menü-Leiste</h2>
@@ -135,9 +137,26 @@
 
         <br/>
 
-        <a id="jump-to-top" href="#menu">/\</a>
-
         <script>
+
+          var list = document.getElementsByClassName("code-block");
+          for (var i = 0; i < list.length; i++) {
+            w3CodeColor(list[i]);
+          }
+
+          window.onscroll = function() {onScroll()};
+
+          function onScroll() {
+            if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
+              document.getElementById("jump-to-top").style.opacity = 100;
+            } else {
+              document.getElementById("jump-to-top").style.opacity = 0;
+            }
+          }
+
+          function scrollToTop() {
+            window.scrollTo(0, 0);
+          }
 
           function infoBoxInitialize(myBoxId) {
             closeNav();
@@ -145,11 +164,6 @@
             document.getElementById(myBoxId).style.backgroundColor = '#929292';
             setTimeout(() => {  document.getElementById(myBoxId).style.backgroundColor = '#36393f'; }, 300);
           }
-
-            var list = document.getElementsByClassName("code-block");
-            for (var i = 0; i < list.length; i++) {
-                w3CodeColor(list[i]);
-            }
             
             function w3CodeColor(elmnt, mode) {
               var lang = (mode || "html");
