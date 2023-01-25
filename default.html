@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>TITLE</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="menu">
+            <h2>
+                <a class="menu-item" href="main.html">Startseite</a>
+                <a class="menu-item" href="test.html">Test</a>
+                <a class="menu-item" href="html-help.html">HTML Hilfe</a>
+                <a class="menu-item" href="default.html">Default page</a>
+            </h2>
+        </div>
+        <div id="header">
+            <h1 class="headline">HEADER1</h1>
+            <h2 class="sub-headline">HEADER2</h2>
+        </div>
+        <a id="jump-to-top" href="javascript:void(0)" onclick="scrollToTop()">/\</a>
+
+        <script>
+
+            window.onscroll = function() {onScroll()};
+
+          function onScroll() {
+            closeNav();
+            if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
+              document.getElementById("jump-to-top").style.opacity = 100;
+            } else {
+              document.getElementById("jump-to-top").style.opacity = 0;
+            }
+          }
+
+          function scrollToTop() {
+            window.scrollTo(0, 0);
+          }
+
+        </script>
+
+    </body>
+</html>

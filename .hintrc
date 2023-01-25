@@ -10,6 +10,7 @@
           "scroll-behavior"
         ]
       }
-    ]
+    ],
+    "meta-viewport": "off"
   }
 }

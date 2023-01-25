@@ -62,6 +62,7 @@ div.nav-line {
 #openNav {
     background-color: #2f3136;
     padding: 1rem;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: -5px;
     float: left;
