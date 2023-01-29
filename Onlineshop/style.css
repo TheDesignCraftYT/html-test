@@ -1,0 +1,95 @@
+#menu {
+    background-color: antiquewhite;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-family: Arial;
+    width: 100.88%;
+    margin-left: -1rem;
+    margin-top: -0.5rem;
+}
+
+#menu p {
+    float: left;
+}
+
+#logo {
+    cursor: default;
+}
+
+#logo1 {
+    font-weight: 900;
+    font-size: x-large;
+    padding-left: 1.5rem;
+    margin-top: 0.6rem;
+}
+
+#logo2 {
+    padding: 0.5rem;
+    margin-top: 1.7rem;
+    margin-left: -2.4rem;
+}
+
+#menu h2 {
+    margin-left: 10rem;
+}
+
+#menu h2 a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    background-color: rgb(197, 189, 179);
+}
+
+#menu h2 a:hover,#menu h2 a:active {
+    background-color: white;
+    cursor: pointer;
+}
+
+#info {
+    background-color: antiquewhite;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 2rem;
+    font-family: Arial;
+}
+
+#show-more-products {
+    text-align: center;
+}
+
+#show-more-products a {
+    text-decoration: none;
+    color: blue;
+}
+
+#show-more-products a:hover, #show-more-products a:active {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#products {
+    text-align: center;
+    padding: 0.5rem;
+    margin-inline: 2.5rem;
+}
+
+#products div {
+    background-color: antiquewhite;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    width: 15rem;
+    height: 20rem;
+    margin: 0.5rem 0.5rem auto;
+    display: inline-block;
+}
+
+#products div h3 {
+    margin-top: -0.05rem;
+}
+
+#products div img {
+    width: 15rem;
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Onlineshop - Startseite</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="menu">
+            <div id="logo">
+                <p id="logo1">Online<br/></p>
+                <p id="logo2">Shop</p>
+            </div>
+            <h2>
+                <a onclick="reload()">Startseite</a>
+            </h2>
+        </div>
+
+        <div id="info">
+            <h2>Unser Online Shop</h2>
+            <p>Der 'OnlineShop' ist ein fiktiver Online-Shop mit fiktiven Produkten, der im Zuge eines Informatik-Projekts entstanden ist. Sie können hier nicht wirklich Geld ausgebeben und nicht wirklich irgendetwas kaufen.</p>
+        </div>
+        <div id="products">*Loading* (Waiting for JavaScript)</div>
+        <div id="show-more-products">
+            <a onclick="showMoreProducts()">Mehr</a>
+        </div>
+
+        <script>
+            const productHtml = '<div><img src="%source" alt="%name"><h3>%name</h3><p>%description</p></div>';
+            let temp = "";
+            let shownProducts = 0;
+
+            let products = [
+                ["Test1|Test Beschreibung", "test1.jpg"],
+                ["Test2|Test Beschreibung", "test1.jpg"],
+                ["Test3|Test Beschreibung", "test1.jpg"],
+                ["Test4|Test Beschreibung", "test1.jpg"],
+                ["Test5|Test Beschreibung", "test1.jpg"],
+                ["Test6|Test Beschreibung", "test1.jpg"],
+            ];
+
+            reload()
+            function reload() {
+                shownProducts = 0;
+                showMoreProducts();
+                document.getElementById("show-more-products").style.opacity = 100;
+            }
+
+            function showMoreProducts() {
+                shownProducts = shownProducts + 3;
+                if (shownProducts >= products.length) {
+                    document.getElementById("show-more-products").style.opacity = 0;
+                }
+                for (let i = 0; i < shownProducts; i++) {
+                    addProductToPage(products[i]);
+                }
+
+                document.getElementById("products").innerHTML = temp;
+                temp = "";
+
+            }
+
+            function addProductToPage(product) {
+                temp += productHtml.replace(/%name/g, product[0].split("|")[0]).replace("%description", product[0].split("|")[1]).replace("%source", product[1]);
+            }
+
+        </script>
+
+    </body>
+</html>
