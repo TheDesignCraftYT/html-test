@@ -2,7 +2,7 @@
     background-color: antiquewhite;
     padding: 0.5rem;
     text-decoration: none;
-    font-family: Arial;
+    font-family: Arial, serif;
     width: 100.88%;
     margin-left: -1rem;
     margin-top: -0.5rem;
@@ -35,6 +35,8 @@
 
 #menu h2 a {
     text-decoration: none;
+    transition: 0.25s;
+    transition-property: background-color;
     color: black;
     padding: 1rem;
     border-radius: 0.25rem;
@@ -52,7 +54,7 @@
     padding: 0.5rem;
     text-align: center;
     margin: 2rem;
-    font-family: Arial;
+    font-family: Arial, serif;
 }
 
 #show-more-products {
@@ -66,30 +68,89 @@
 
 #show-more-products a:hover, #show-more-products a:active {
     text-decoration: underline;
-    cursor: pointer;
 }
 
 #products {
     text-align: center;
     padding: 0.5rem;
     margin-inline: 2.5rem;
+    font-family: Arial, serif;
+    margin-top: 0;
 }
 
 #products div {
     background-color: antiquewhite;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     padding: 0.5rem;
     width: 15rem;
     height: 20rem;
-    margin: 0.5rem 0.5rem auto;
     display: inline-block;
+    margin: 0.5rem 0.5rem auto;
+}
+
+#products div:hover {
+    cursor: pointer;
 }
 
 #products div h3 {
-    margin-top: -0.05rem;
+    margin-top: 0.2rem;
+}
+
+#products div p {
+    margin-top: -1rem;
+    overflow: hidden;
+    height: 2.4rem;
 }
 
 #products div img {
     width: 15rem;
     border-radius: 0.5rem;
+}
+
+#product-detail {
+    background-color: antiquewhite;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-family: Arial, serif;
+    border: 3px lightgray solid;
+    display: block;
+    position: fixed;
+    width: 690px;
+    height: 400px;
+    transition: 0.25s;
+    transition-property: opacity;;
+}
+
+#product-detail a {
+    float: right;
+    font-size: 3rem;
+    margin-top: -0.6rem;
+    transition: 0.25s;
+    color: black;
+}
+
+#product-detail a:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+#product-detail img {
+    border-radius: 0.5rem;
+    width: 400px;
+    float: left;
+}
+
+#product-detail h2 {
+    margin: 5px 410px;
+    text-decoration: underline;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#product-detail p {
+    margin: 10px 410px;
+    width: 280px;
+    overflow: hidden;
+    height: available;
 }
